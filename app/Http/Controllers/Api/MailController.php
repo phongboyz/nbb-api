@@ -35,9 +35,17 @@ class MailController extends Controller
         }
 
         $fourRandomDigit = mt_rand(1000,9999);
-        $template_path = 'email_forgot_password';
+        // $template_path = 'emails.email_template';
+        //         $data = array(
+        //             'code'=>$fourRandomDigit
+        //         );
+        // Mail::send($template_path,$data, function($message) {
+        //     $message->to('phongsavanh@nbb.com.la', 'kk')->subject('ລະຫັດຢືນຢັນການລົງທະບຽນ');
+        //     $message->from('dms_nbb@nbb.com.la','dms_nbb@nbb.com.la');
+        // });
+        // $template_path = 'email_forgot_password';
         $details = array(
-            // 'code'=>$fourRandomDigit,
+            'code'=>$fourRandomDigit,
             // 'email'=>$data->email,
             // 'id'=>$data->id,
             // 'username'=>$data->name,
